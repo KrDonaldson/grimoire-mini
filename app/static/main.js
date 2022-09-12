@@ -4,7 +4,7 @@
 //             method: 'GET',
 //             headers: {
 //                 'Content-Type': 'application/json',
-//                 'x-access-token': `Bearer ${'b738a5058cb01722dad257fcc9ea660c547443e5a2a065a3'}`
+//                 'x-access-token': `Bearer ${'current_user.token'}`
 //             }
 //         });
 //     console.log(result)

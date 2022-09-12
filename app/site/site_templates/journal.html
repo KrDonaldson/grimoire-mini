@@ -10,6 +10,8 @@
                     <div class="d-md-flex">
                         <h1 class="col text-center pb-5 fs-1">Journal Entries</h1>
                     </div>
+                    {{current_user.id}}
+                    {{current_user.token}}
                 </div>
             </div>
         </section>
@@ -26,7 +28,7 @@
         </div> -->
 
         <div id="addbutton">
-            <a href="{{ url_for('addEntry.html') }}"
+            <a href="{{ url_for('site.addEntry') }}"
                 class="btn text-light rounded-circle p-0 m-0"
                 data-toggle="modal"
                 role="button">
