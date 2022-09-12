@@ -19,20 +19,16 @@
                 <div class="user-details text-center">
                     <div id="user-name">
                         <h4>Name {{username}}</h4>
-                        <li class="list-group-item">Email: {{ current_user.email }}</li>
-                        <li class="list-group-item">Token: {{ current_user.token }} </li>
-                        <li class="list-group-item">id: {{ current_user.id }} </li>
-                        <li class="list-group-item">username: {{ current_user.username }} </li>
-                        <li class="list-group-item">password: {{ current_user.password }} </li>
                     </div>
                 </div>
                 <div class="auth-details">
+                    <h5>Token: {{ current_user.token }}</h5>
+                    <h5>id: {{ current_user.id }}</h5>
                     <div id="user-username">
-                        <h5>Username</h5>
-                        <p>{{username}}</p>
+                        <h5>Username: {{ current_user.username }}</h5>
                     </div>
                     <div id="user-email">
-                        <h5>Email</h5>
+                        <h5>Email: {{ current_user.email }}</h5>
                         <p>{{email}}</p>
                     </div>
                     <div id="user-password">
