@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section>
+    <div class="container my-md-5">
+        <div class="row">
+            <div class="d-md-flex">
+                <h1 class="col text-center pb-5 display-1">Your Online Grimoire</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container my-md-5">
+        <div class="row">
+            <div class="d-md-flex">
+                <p class="col text-center py-3 fs-5">"It's gonna get harder before it gets easier. But it will get better, you just gotta make it through the hard stuff first."</p>
+            </div>
+        </div>
+    </div>
+    <div class="m-lg-5">
+        <div class="row col-md-8 gap-3 mx-auto">
+            <a href="{{ url_for('site.journal') }}" 
+                class="btn col-md-4 btn-lg mx-auto home-nav-button" 
+                role="button">
+                Journal</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
