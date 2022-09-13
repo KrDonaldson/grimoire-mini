@@ -1,18 +1,26 @@
-// async function getEntries() {
-//     const url = '/api/entries'
-//     let result = await fetch(url,{
-//             method: 'GET',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 'x-access-token': `Bearer ${'current_user.token'}`
-//             }
-//         });
-//     console.log(result)
-//     if (!response.ok){
-//         console.log('Failed to fetch data from server')
-//     }
-//     let response = await result.json();
-//     console.log(response);
-// }
+async function getEntries() {
+    const url = 'https://api.goprogram.ai/inspiration'
+    let result = await fetch(url,{
+            method: 'GET'
+        });
+    let response = await result.json();
 
-// getEntries()
+    var dailyInspiration = [response.quote, response.author]
+
+    console.log(dailyInspiration)
+
+    let div = document.getElementById('inspiration')
+
+    //add quote
+    let quote = document.createElement("h3")
+    quote.textContent = dailyInspiration[0]
+    div.appendChild(quote)
+
+    //add author
+    let author = document.createElement('h5')
+    author.textContent = '-- ' + dailyInspiration[1]
+    author.classList.add('text-end')
+    div.appendChild(author)
+}
+
+getEntries()

@@ -5,7 +5,7 @@ from flask_login import current_user
 
 api = Blueprint('api',__name__, url_prefix='/api')
 
-@api.route('/entries', methods=['POST'])
+@api.route('/entry', methods=['POST'])
 @token_required
 def create_entry(current_user):
     name = request.json['name']
