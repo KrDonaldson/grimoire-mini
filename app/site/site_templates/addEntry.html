@@ -13,10 +13,23 @@
 <section>
     <div class="container my-2">
         <div class="row">
-            <div class="d-md-flex">
-                <h3 class="col text-center p-2">New Journal Entry</h3>
-                <div class="container col-lg-6">
-                    {% include 'signupform.html' %}
+            <div class="d-flex justify-content-center">
+                <div class="d-md-flex flex-column col-md-6">
+                    <h3 class="text-center">New Journal Entry</h3>
+                    <div class="container">
+                        <form action='../../journal/entry' method="POST">
+                            {{form.hidden_tag()}}
+                            <div class="form-group">
+                                <label for="name">Title</label>
+                                {{ form.name(class = 'form-control', placeholder = 'Title') }}
+                            </div>
+                            <div class="form-group">
+                                <label for="details">Journal Entry</label>
+                                {{ form.details(class = 'form-control', placeholder = 'Title') }}
+                            </div>
+                            {{ form.submit_button(class = "btn btn-primary btn-block mt-2")}}
+                            </form>
+                    </div>
                 </div>
             </div>
         </div>
