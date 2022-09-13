@@ -23,10 +23,6 @@
                 </div>
                 <div class="auth-details f-flex flex-row">
                     <div class="auth-details-items">
-                        <h5>Token: </h5>
-                        <p>{{ current_user.token }}</p>
-                        <h5>id: </h5>
-                        <p>{{ current_user.id }}</p>
                         <div id="user-username" class="d-flex">
                             <h5>Username: </h5>
                             <p>{{ current_user.username }}</p>
@@ -40,15 +36,15 @@
                             <p>*****</p>
                         </div>
                     </div>
-                    <div class="auth-details-button">
+                    <!-- <div class="auth-details-button">
                         <button type="button" class="btn btn-default" aria-label="edit">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil text-light" viewBox="0 0 16 16">
                                 <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
                             </svg>
                         </button>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="user-details">
+                <!-- <div class="user-details">
                     <div id="user-birthday">
                         <h5>Birth Date</h5>
                         {{birthday}}
@@ -113,21 +109,25 @@
                         </h5>
                         {{youtube}}
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div id="aspirations-container" class="col-md-5 ">
+            <!-- <div id="aspirations-container" class="col-md-5 ">
                 <h5>Goals, Dreams, and Aspirations</h5>
                 <div id="user-aspirations">
                     <p>{{aspirations}}</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
-    <div class="container logout-button">
-        <a href="{{ url_for('auth.signout') }}" 
-        class="btn col-md-4 btn-lg mx-auto home-nav-button" 
-        role="button">
-        Log Out</a>
+    <div class="container logout-button my-md-5">
+        <div class="row">
+            <div class="d-md-flex">
+                <a href="{{ url_for('auth.signout') }}" 
+                class="btn col-md-4 btn-lg mx-auto home-nav-button" 
+                role="button">
+                Log Out</a>
+            </div>
+        </div>
     </div>
 
 {% else %}
