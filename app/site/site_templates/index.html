@@ -16,6 +16,7 @@
             </div>
         </div>
     </div>
+    {% if current_user.is_authenticated %}
     <div class="m-lg-5">
         <div class="row col-md-8 gap-3 mx-auto">
             <a href="{{ url_for('api.get_entries') }}" 
@@ -24,6 +25,7 @@
                 Journal</a>
         </div>
     </div>
+    {% endif %}
 </section>
 
 {% endblock %}
